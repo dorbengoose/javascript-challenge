@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<!--HTML INDEX UFO SIGHTSEEING
+    TRILOGY BOOTCAMP,JAVA SCRIPT
+    Ricardo Reynoso Ramos-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>UFO JS</title>
+    <!--IMPORT BOOTSTRAP STYLES AND FONTS, CALL THE CSS FILE-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.4.1/superhero/bootstrap.min.css" rel="stylesheet" integrity="sha384-R/oa7KS0iDoHwdh4Gyl3/fU7pgvSCt7oyuQ79pkw+e+bMWD9dzJJa+Zqd+XJS0AD" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="index.html">UFO SIGHTS
+                        <img class="nav-ufo" src="static/images/ufo.svg">
+                    </a>
+                </div>
+            </div>
+        </nav>
+        <div class="hero text-center">
+            <h1>UFO RECORD SIGHTINGS</h1>
+            <hr color="gray">
+            <p>BOOTCAMP HOMEWORK</p>
+        </div>
+        <div class="container">
+            <div class="row margin-top-50">
+                <div class="col-md-2">
+                    <aside class="filters">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">ENTER CRITERIA</div>
+                            <div class="panel-body">
+                                <form>
+                                    <div class="form-group">
+                                        <ul class="list-group" id="filters">
+                                            <li class="filter list-group-item">
+                                                <label for="date">Search by Date (DD/MM/YY)</label>
+                                                <input class="form-control" id="datetime" type="text" placeholder="1/11/2011">
+                                            </li>
+                                            <li class="filter list-group-item">
+                                                <label for="city">Search by City (lowercase)</label>
+                                                <input class="form-control" id="city" type="text" placeholder="benton">
+                                            </li>
+                                            <li class="filter list-group-item">
+                                                <label for="state">Search by State (Abbreviaton)</label>
+                                                <input class="form-control" id="state" type="text" placeholder="ar">
+                                            </li>
+                                            <li class="filter list-group-item">
+                                                <label for="country">Search by Country (Abbreviation)</label>
+                                                <input class="form-control" id="country" type="text" placeholder="us">
+                                            </li>
+                                            <li class="filter list-group-item">
+                                                <label for="shape">Enter UFO Shape</label>
+                                                <input class="form-control" id="shape" type="text" placeholder="circle">
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <button id="filter-btn" type="button" class="btn btn-default">Search </button>
+                                    <button id="reset-btn" type="button" class="btn btn-default">Reset Search</button>
+                                </form>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+                <div class="col-md-10">
+                    <div id="table-area" class="">
+                        <table id="ufo-table" class="table table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <th class="table-head">Date</th>
+                                    <th class="table-head">City</th>
+                                    <th class="table-head">State</th>
+                                    <th class="table-head">Country</th>
+                                    <th class="table-head">Shape</th>
+                                    <th class="table-head">Duration</th>
+                                    <th class="table-head">Comments</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="footer">
+                &copy; Copyright Ricardo Reynoso Bootcamp Trilogy/ITESM
+            </div>
+        </footer>
+    </div>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="static/js/data.js"></script>
+    <script src="static/js/app.js"></script>
+</body>
+
+</html>
